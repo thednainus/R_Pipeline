@@ -30,6 +30,7 @@ phyloTop version 1.1.1
 
 pegas version 0.8.2
 
+
 To run “RWeka_predication_R_pipeline.R” the following R packages a necessary:
 
 RWeka version 0.4.24
