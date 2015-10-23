@@ -15,17 +15,25 @@ In alignments folder you can find the alignments for PERVs used for analysis of 
 To run “R_Pipeline_Empirical_Data.R” the following R packages a necessary:
 
 apTreeshape version 1.4.5
+
 ape version 3.3
+
 phangorn version 1.99.14
+
 phylobase version 0.8.0 (required to install phyloTop)
+
 NHPoisson version 3.1 (required to install phyloTop)
+
 igraph version 1.0.1 (required to install phyloTop)
+
 phyloTop version 1.1.1
+
 pegas version 0.8.2
 
 To run “RWeka_predication_R_pipeline.R” the following R packages a necessary:
 
 RWeka version 0.4.24
+
 rJava version 0.9.7
 
 Even though the above versions were used in the latest analyses of the data. New versions should also work.
