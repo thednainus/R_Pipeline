@@ -7,6 +7,7 @@ Use R code “R_Pipeline_Empirical_Data.R” to calculate all statistics for phy
 
 Upload file “classifier_1000bp.dat” or “classifier_10000bp.dat” to your computer, and use R code “RWeka_predication_R_pipeline.R” to predict the model of ERV/TE evolution according to simulations in Nascimento and Rodrigo (submitted for publication). 
 
+Please be sure to modify the PATH inside each code to a more meaningful path to you. This path is where the files you want to analyse are located in your computer. Whenever you should change a path name to something more meaningful to you, this is indicated in the R code.
 
 In alignments folder you can find the alignments for PERVs used for analysis of empirical data in Nascimento and Rodrigo (submitted for publication).
 
