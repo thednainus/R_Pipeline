@@ -18,7 +18,7 @@
 # (x) Nucleatide diversity for DNA sequence alignments
 
 # Sets work directory to Desktop. You can change the path to any other directory
-setwd("~/Desktop/sus/result/")
+setwd("~/Desktop/result/")
 
 # Install packages below if not already installed. Use install.packages("packageNameHere").
 library(apTreeshape)
@@ -33,8 +33,8 @@ library(pegas)
 
 # Read file names in a matrix. If more than one tree/DNA sequence alignment will be analyzed, make sure that the final file with the statistics values
 # are in the same order. This will be important for prediction of the ERV model with RWeka (see R code about prediction with RWeka for ERV models)
-  File_names_tree  <- matrix(list.files(path="~/Desktop/sus/tree/", pattern ="*.tre", recursive = FALSE, include.dirs = FALSE))
-  File_names_ali <- matrix(list.files(path="~/Desktop/sus/alignment/", pattern ="*.txt", recursive = FALSE, include.dirs = FALSE))
+  File_names_tree  <- matrix(list.files(path="~/Desktop/tree/", pattern ="*.tre", recursive = FALSE, include.dirs = FALSE))
+  File_names_ali <- matrix(list.files(path="~/Desktop/alignment/", pattern ="*.txt", recursive = FALSE, include.dirs = FALSE))
 
 
 ## Function to analyse reconstructed phylogenetic trees (ML trees) in which each tree should be in a separate file.
@@ -47,11 +47,11 @@ ML_tree_stats <- function(x) {
   
   # This part of the code will create a file with the name "ML_trees_statistics.txt" as below. You can change this file name.
   # You should change this part of the code in accordance to your OS.
-  Path = "~/Desktop/sus/result/ML_tree_stats.txt"
+  Path = "~/Desktop/result/ML_tree_stats.txt"
   
   
   # You should paste the test of the path to "x", to read phylogenetic trees. You should change this part of the code in accordance to your OS.
-  x <- paste("~/Desktop/sus/tree/", x, sep="")
+  x <- paste("~/Desktop/tree/", x, sep="")
   tree <- read.tree(x)
   tree <- midpoint(tree) # YOU SHOULD COMMENT THIS LINE IF YOUR TREES ARE ALREADY ROOTED
   
@@ -95,9 +95,9 @@ nuc_diversity_empirical <- function(x){
   fileName <- x
   
   # You should change this name is accordance to your OS. You can change the name of the file to any other meaninful name
-  Path = "~/Desktop/sus/result/nuc_diversity.txt"
+  Path = "~/Desktop/result/nuc_diversity.txt"
   
-  x <- paste("~/Desktop/sus/alignment/", x, sep="") # You should change this path name is accordance to your OS
+  x <- paste("~/Desktop/alignment/", x, sep="") # You should change this path name is accordance to your OS
   
   Seq_ali <- read.FASTA(x) # Read DNA sequence alignment
   Nuc.Diversity <- nuc.div(Seq_ali, pairwise.deletion = TRUE) # Calculates the nucleotide diversity
