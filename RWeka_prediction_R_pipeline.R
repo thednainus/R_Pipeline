@@ -2,13 +2,16 @@
 library(RWeka)
 library(rJava)
 
+# Add the path and file name that you wish to analyse 
+tree_stats_path <- "ADD PATH HERE" # Example: "~/Desktop/ML_tree_stats.txt"
+nuc_diversity_path <- "ADD PATH HERE" # Example: "~/Desktop/nuc_diversity.txt"
+
 # After download the classifier you should load it in R using the following command for prediction of empirical data
 load("classifier_1000bp.dat") # Classifier that should be used for predictions when DNA sequence alingment is approximately 1,000 bp
 load("classifier_10000bp.dat") # Classifier that should be used for predictions when DNA sequence alingment is approximately 10,000 bp
 
-# Change the file names if necessary
-tree_stats <- read.delim("~/Desktop/NESCent/Simulation_paper/FINAL/PlosOne/sus/result/ML_tree_stats.txt", header = FALSE)
-nuc_diversity <- read.delim("~/Desktop/NESCent/Simulation_paper/FINAL/PlosOne/sus/result/nuc_diversity.txt", header = FALSE)
+tree_stats <- read.delim(tree_stats_path, header = FALSE)
+nuc_diversity <- read.delim(nuc_diversity_path, header = FALSE)
 
 # Adding names to collumns
 colnames(tree_stats) <- c("file_name", "Beta_Index", "maxLadder", "ILportion", "maxDepth", "maxWidth", "woverd", "maxDiffWidth", "nCherry", "prop")
