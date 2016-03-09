@@ -13,7 +13,7 @@ In alignments folder you can find the alignments for PERVs used for analysis of 
 
 -------------------------
 
-To run “R_Pipeline_Empirical_Data.R” the following R packages a necessary:
+To run “R_Pipeline_Empirical_Data.R” the following R packages are necessary:
 
 apTreeshape version 1.4.5
 
